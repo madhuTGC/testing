@@ -292,35 +292,19 @@
 
 
 
-/* #timer {
+#timer {
     text-align: right;
     position: absolute;
     top: 10px;
     right: 40px;
     color: #0c0b0b;
     font-size: 1.3em;
+    /* background-color: #aae4f3; */
     background: linear-gradient(rgb(100, 98, 98),rgb(216, 213, 213));
     padding: 9px;
-    border-radius: 50%; 
+    border-radius: 50%; /* Round the border */
     box-shadow: 0 0 10px rgba(41, 38, 38, 0.2);
-} */
-
-
-
-#timer {
-            
-    color: #0c0b0b;
-    font-size: 1.3em;
-    background-color: white;
-    border: yellow;
-    position: relative;
-    /* padding: 5px; */
-    box-shadow: 0 0 10px rgba(41, 38, 38, 0.2);
-    border-radius: 30px;
-    width: 10vw;
-    height: 5vh;
-    padding: 10px;
-    text-align: end;
+    /* transition: transform 0.5s ease; */
 }
 
 #timer:hover {
@@ -328,7 +312,7 @@
 }
 
 /* Additional styling for mobile responsiveness */
-/* @media (max-width: 480px) {
+@media (max-width: 480px) {
     .modal-body {
         padding: 20px;
     }
@@ -342,7 +326,7 @@
         font-size: 1em;
         padding: 10px;
     }
-} */
+}
 
 
 
@@ -388,11 +372,30 @@
         
         
         
+        .car {
+            width: 50px;
+            height: 70px;
+            background: red;
+            position: absolute;
+            bottom: 120px;
+            background-image: url('assets/images/car.png');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        
         .radio-container {
             padding: 1em;
         }
         
-        
+        .enemyCar {
+            width: 60px;
+            height: 80px;
+            position: absolute;
+            bottom: 120px;
+            background-image: url('assets/images/flag.png');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
         
         .roadLines {
             width: 10px;
@@ -466,7 +469,7 @@
             width: 600px !important;
         }
         
-       
+        
         
         .modal-header {
             background-color: #e0e3e6;
@@ -487,7 +490,9 @@
             text-align: left;
         }
         
-        
+        #ins {
+            color: rgb(224, 57, 57);
+        }
         
         .modal-footer {
             justify-content: center;
@@ -575,13 +580,7 @@
         
         /* ... (existing styles) ... */
         
-        /* .modal-content {
-            border: 2px solid #3498db;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            background: url('assets/images/assesment-4.jpg') center center no-repeat;
-            background-size: cover;
-        } */
+        
         
         .modal-header {
             background-color: #e0e3e6;
@@ -602,6 +601,9 @@
             text-align: left;
         }
         
+        #ins {
+            color: rgb(224, 57, 57);
+        }
         
         .modal-footer {
             justify-content: center;
@@ -641,71 +643,19 @@
         }
         
         /* Additional styling for mobile responsiveness */
-        
-
-
-
         @media (max-width: 480px) {
-            .modal-content {
-                width: 80%; /* Adjust the width as needed for your design */
-                max-width: 100%;
-            }
-        
-            .modal-header {
-                width: 100%;
-                justify-content: center; /* Center the content horizontally */
-                align-items: center; /* Center the content vertically */
-                flex-direction: column; /* Stack child elements vertically */
-            }
-        
-            #timer-icon {
-                left: initial;
-                right: 10px; /* Adjust as needed */
-            }
-        
-            #timer {
-                width: 50%;
-                text-align: end;
-                /* margin-top: 10px; */
-            }
-        
             .modal-body {
-                padding: 10px;
+                padding: 20px;
             }
         
             #questionText {
                 font-size: 1.2em;
-                margin-bottom: 10px;
+                margin-bottom: 15px;
             }
         
             .radio-container label {
                 font-size: 1em;
                 padding: 8px;
             }
-        
-            #continueButton {
-                padding: 8px 16px;
-                font-size: 1rem;
-            }
-        
-            .carGame {
-                background-size: cover;
-            }
-        
-            .startScreen {
-                width: 200px;
-            }
-        
-            .gameArea {
-                width: calc(100% - 14px);
-                height: 100vh;
-                background: #2d3436;
-            }
-        
-            .score {
-                left: 150px;
-                width: 100px;
-                font-size: 1em;
-                z-index: 1;
-            }
         }
+        

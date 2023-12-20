@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0 user-scalable=0">
+
+    <title>CarRacer</title> 
+    <!-- Add this to the head of your HTML file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-lyTlqV2GB++uzxwUeQrs8z3iKdDYotvZziL3aW5LQEzC8K8WKtAjUo4gJC0Lm+X2QrNU1qQ/lbI2FeVqjXLpJw==" crossorigin="anonymous" />
+
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="carGame">
+        <div class="score"></div>
+        <div class="startScreen">
+            <!-- <h1 id="ins">Instruction</h1>
+            <p>Press here to start <br>
+               Use Arrow keys to move <br>
+               If you hit any flag you will do Assessment.  
+            </p> -->
+            <div>
+                <span class="level">
+                    <!-- <button id="easy" onclick="getData()">Easy</button> -->
+                    <button id="easy">Start</button>
+
+
+                    <!-- <button id="moderate">Moderate</button>
+                    <button id="difficult">Difficult</button> -->
+                </span>
+            </div>
+
+            
+        </div>
+        <div class="gameArea"></div>
+        <div class="modal" tabindex="-1" role="dialog" id="questionModal" > 
+
+            <div id="mcq"></div>
+
+
+            <div class="modal-dialog modal-dialog-centered custom-modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header" style="width: 100%;">
+                        <h5 class="modal-title"></h5>
+                        <div class="d-flex justify-content-end" style="width:100%">
+                            <img id="timer-icon" src="assets/images/timer.png" alt="Timer Icon">
+                        </div>
+                        <div id="timer"></div>
+
+                        
+                        
+                    </div>
+                    <div class="modal-body">
+                        <img src="assets/images/que-image.png" alt="Image Alt Text" style="width: 100%; max-width: 100%; height: 100%;">
+
+                        <p id="questionText"></p>
+                        <!-- <p id="question-options"></p> -->
+                    </div>
+
+                    <div class="radio-container">
+                        <label>
+                          <input type="radio" name="group" value="1" required>  
+                        </label>
+                        <label>
+                          <input type="radio" name="group" value="2" required>  
+                        </label>
+                        <label>
+                          <input type="radio" name="group" value="3" required>  
+                        </label>
+                        <label>
+                          <input type="radio" name="group" value="4" required>  
+                        </label>
+                    </div>
+                    <div id="error-text"></div>
+                    <div class="modal-footer">
+                        <button type="button" id="continueButton" class="btn btn-secondary" >Submit</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="gameHandler.js"></script>
+</body>
+</html>
